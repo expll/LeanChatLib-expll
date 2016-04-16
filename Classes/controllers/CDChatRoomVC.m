@@ -563,8 +563,6 @@ typedef void (^LCIMErrorBlock)(NSString *messageUUID, NSError *error);
         [self insertMessage:message];
         //        [[CDChatManager manager] setZeroUnreadWithConversationId:self.conversation.conversationId];
         //        [[NSNotificationCenter defaultCenter] postNotificationName:kCDNotificationMessageReceived object:nil];
-        [[[UIAlertView alloc] initWithTitle:@"receiveMessage" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"TabbarNeedFreshNoti" object:nil];
     }
 }
 

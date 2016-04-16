@@ -64,6 +64,7 @@
     if (self.needPlaySoundWhenChatting) {
         AudioServicesPlaySystemSound(_receiveSound);
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NeedUpdateMessageCountShowNotification" object:nil];
 }
 
 - (void)playLoudReceiveSoundIfNeed {
